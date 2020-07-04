@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="Fragments.RecodingListFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAudioList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"/>
+
+    <ImageView
+            android:id="@+id/IvPlaceHolder"
+            android:src="@drawable/microphone"
+            android:tint="#99FFFFFF"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible"
+            android:background="#e25f3f"
+            android:id="@+id/toolbarMain">
+
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+        >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="60dp"
+                    android:layout_height="@dimen/toolbar_item_height"
+                    android:src="@drawable/my_delete"
+                    android:tint="#FFFFFF"
+                    android:id="@+id/delete"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+            />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="60dp"
+                    android:layout_height="@dimen/toolbar_item_height"
+                    android:src="@drawable/my_select_all"
+                    android:tint="#FFFFFF"
+                    android:id="@+id/selectAll"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+            />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="60dp"
+                    android:layout_height="@dimen/toolbar_item_height"
+                    android:src="@drawable/share"
+                    android:tint="#FFFFFF"
+                    android:id="@+id/share"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+            />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>

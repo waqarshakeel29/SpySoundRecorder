@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:tools="http://schemas.android.com/tools" app:cardCornerRadius="8dp"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:background="#FFFFFF"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/tvName"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:text="Save Recording"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+                android:textCursorDrawable="@null"
+                android:textColor="#000000"
+                android:id="@+id/et"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_below="@id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="17dp"/>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/save"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="SAVE"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/delete"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="DELETE"
+                    android:textSize="17dp"
+                    android:textColor="#FFFFFF"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
