@@ -14,6 +14,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.alarm.app.alarmkotlin.MainActivity
 
@@ -70,9 +71,13 @@ class RecodingFragment : Fragment() {
 
         vibe = activity!!.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
-        var file = File(Environment.getExternalStorageDirectory().path + "/MyRecorder")
-        file.mkdir()
 
+        var file = File(Environment.getExternalStorageDirectory().path + "/MyRecorder")
+//        var file = File(Environment.getExternalStorageDirectory().path)
+        file.mkdir()
+//        Toast.makeText(activity!!,"Path: " + ContextCompat.getExternalFilesDirs(activity!!, null)[0].path,Toast.LENGTH_LONG).show()
+//        Log.d("SecondReleaseError","Path: " + ContextCompat.getExternalFilesDirs(activity!!, null)[0].path)
+        Log.d("SecondReleaseError","Path: " + file.listFiles())
         if(file.listFiles().isNotEmpty()){
             var listOfFiles = file.listFiles()
             listOfFiles.sort()
